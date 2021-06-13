@@ -63,7 +63,7 @@ export default function Home({ data }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch('https://yskszk63.github.io/yes-collection/results.txt', { mode: 'cors' });
   const tsv = await res.text();
   const data = tsv.split(/$/gm)

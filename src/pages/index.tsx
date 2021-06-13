@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head'
-import { AppBar, Container, Typography, Toolbar } from '@material-ui/core';
+import { AppBar, Container, Typography, Toolbar, Link, Paper } from '@material-ui/core';
 import { DataGrid } from '@material-ui/data-grid';
 import { Bar } from 'react-chartjs-2';
 
@@ -44,21 +44,27 @@ export default function Home({ data }) {
         <title>yes-collection results</title>
         <meta name="description" content="Comparison of speeds of yes programs roughly written in each language." />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       </Head>
 
       <AppBar>
         <Toolbar>
-          <Typography variant="h6">yes-collection results</Typography>
+          <Typography variant="h6"> yes-collection results </Typography>
         </Toolbar>
       </AppBar>
       <Container maxWidth="md" fixed style={{ marginTop: '92px' }}>
-        <Bar type='horizontalBar' data={chartdata} options={options}/>
-        <div style={{ width: '100%', height: '80vh' }}>
-          <DataGrid columns={columns} rows={data} />
-        </div>
+        <Paper>
+          <Bar type='horizontalBar' data={chartdata} options={options}/>
+        </Paper>
+        <Paper style={{ marginTop: '2rem' }}>
+          <div style={{ width: '100%', height: '80vh' }}>
+            <DataGrid columns={columns} rows={data} />
+          </div>
+        </Paper>
+        <Typography style={{ marginTop: '2rem' }}>
+          This page renders <Link href="https://github.com/yskszk63/yes-collection">yskszk63/yes-collection</Link> results.
+        </Typography>
       </Container>
-
-      <footer> </footer>
     </div>
   )
 }

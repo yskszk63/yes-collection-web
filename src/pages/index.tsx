@@ -52,7 +52,7 @@ export default function Home({ data }) {
         </Toolbar>
       </AppBar>
       <Container maxWidth="md" fixed style={{ marginTop: '92px' }}>
-        <Bar data={chartdata} options={options}/>
+        <Bar type='horizontalBar' data={chartdata} options={options}/>
         <div style={{ width: '100%', height: '80vh' }}>
           <DataGrid columns={columns} rows={data} />
         </div>

@@ -17,17 +17,17 @@ export default function Home({ data }) {
     labels: data.map(d => d.name),
     datasets: [
       {
-        label: 'max',
-        data: data.map(d => d.max),
-        backgroundColor: 'rgba(255, 99, 132, 1)',
-      },
-      {
-        label: 'min',
+        label: 'min (bytes/ms)',
         data: data.map(d => d.min),
         backgroundColor: 'rgba(54, 162, 235, 1)',
       },
       {
-        label: 'avg',
+        label: 'max (bytes/ms)',
+        data: data.map(d => d.max),
+        backgroundColor: 'rgba(255, 99, 132, 1)',
+      },
+      {
+        label: 'avg (bytes/ms)',
         data: data.map(d => d.avg),
         backgroundColor: 'rgba(255, 206, 86, 1)',
       },

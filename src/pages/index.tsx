@@ -19,14 +19,17 @@ export default function Home({ data }) {
       {
         label: 'max',
         data: data.map(d => d.max),
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
       },
       {
         label: 'min',
         data: data.map(d => d.min),
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
       },
       {
         label: 'avg',
         data: data.map(d => d.avg),
+        backgroundColor: 'rgba(255, 206, 86, 0.2)',
       },
     ],
   };
